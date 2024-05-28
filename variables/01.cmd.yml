@@ -1,0 +1,11 @@
+# command line version
+- name: variables from PLAY level
+  hosts: localhost
+  tasks:
+  - name: check variables
+    ansible.builtin.debug:
+      msg: "Hello {{PERSON}}, Good {{WISHES}}"
+
+# ansible-playbook -i inventory.inl -e ansible_user=centos -e ansible_password=DevOps321 -e "PERSON=sivakumar" -e "WISHES=good morning" 01.cmd.yml
+
+# to pass command line  arguments  "PERSON=hari" "WISHES=good morning"
