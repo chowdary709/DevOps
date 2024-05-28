@@ -1,1 +1,0 @@
-Xcode Theme [https://plugins.jetbrains.com/plugin/15727-xcode-theme]
