@@ -1,4 +1,7 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -6,6 +9,19 @@
             "request": "launch",
             "name": "Run gitp.sh",
             "command": "${workspaceFolder}/gitp.sh"
+        },
+        {
+            "type": "shell",
+            "request": "launch",
+            "name": "Hello world",
+            "command": "echo",
+            "args": [
+                "Hello",
+                "World!"
+            ]
         }
+    ]
+}
+
     ]
 }
