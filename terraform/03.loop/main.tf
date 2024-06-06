@@ -10,10 +10,10 @@ variable "instance_name" {
 resource "aws_instance" "instance" {
   count         = length(var.instance_name)
   ami           = data.aws_ami.ami.id
-  instance_type = var.instance_name[count.index] == "mysql" ? "t3.micro" : "t2.micro"
+  instance_type = var.instance_name == "mysql" ? "t3.micro" : "t2.micro"
 
   tags = {
-    Name = "${var.instance_name[count.index]}-${count.index + 1}"
+    Name = "${var.instance_name}-${count.index + 1}"
   }
 }
 
