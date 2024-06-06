@@ -27,3 +27,12 @@ resource "aws_route53_record" "record" {
   type    = "A"
   zone_id = "Z0013695SMHQDK42GJB1"
 }
+resource "aws_route53_record" "record" {
+  count   = length(var.instance_name)
+  name    = "${var.instance_name[count.index]}.chowdary.cloud"
+  type    = "A"
+  zone_id = "Z0013695SMHQDK42GJB1"
+  records = [aws_instance.instance.private_ip]
+  # TTL is required for standard DNS records
+  ttl     = 300
+}
