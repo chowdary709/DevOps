@@ -20,13 +20,7 @@ resource "aws_instance" "instance" {
 
 
 
-resource "aws_route53_record" "record" {
-  count   = length(var.instance_name)
-  name    = "${var.instance_name[count.index]}.chowdary.cloud"  # Corrected the syntax
-  ttl     = 300
-  type    = "A"
-  zone_id = "Z0013695SMHQDK42GJB1"
-}
+
 resource "aws_route53_record" "record" {
   count   = length(var.instance_name)
   name    = "${var.instance_name[count.index]}.chowdary.cloud"
