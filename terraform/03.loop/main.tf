@@ -4,7 +4,8 @@ provider "aws" {
 
 variable "instance_name" {
   type    = list(string)
-  default = ["frontend", "backend", "mysql"]
+#   default = ["frontend", "backend", "mysql"]
+  default = ["frontend"]
 }
 
 resource "aws_instance" "instance" {
@@ -18,3 +19,11 @@ resource "aws_instance" "instance" {
 }
 
 
+
+resource "aws_route53_record" "record" {
+  count   = length(var.instance_name)
+  name    = "${var.instance_name[count.index]}.chowdary.cloud"  # Corrected the syntax
+  ttl     = 300
+  type    = "A"
+  zone_id = "Z0013695SMHQDK42GJB1"
+}
