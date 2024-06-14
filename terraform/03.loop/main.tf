@@ -13,6 +13,10 @@ resource "aws_instance" "instance" {
   ami           = data.aws_ami.ami.id
   instance_type = var.instance_name[count.index] == "mysql" ? "t3.micro" : "t2.micro"
 
+  # if condition is true then the result is t3.micro .
+  # If condition is false then the result is t2.micro.
+  # instance name = mysql  pick the t3.micro  ,  otherwise pick the t2.micro.
+
   tags = {
     Name = "${var.instance_name[count.index]}-${count.index + 1}"
   }
