@@ -33,7 +33,3 @@ resource "aws_route53_record" "record" {
   ttl     = 300
   records = [aws_instance.instance[count.index] == "web" ? aws_instance.instance[count.index].public_ip : aws_instance.instance[count.index].private_ip]
 }
-
-#
-#
-#
