@@ -1,4 +1,3 @@
-
 resource "aws_instance" "instance" {
   ami                         = local.ami
   instance_type               = local.instance_type
