@@ -1,12 +1,13 @@
 variable "instance_name" {
-  type = map
+  type = map(string)
   default = {
     web     = "t2.micro"
     # backend = "t2.micro"
     # mysql   = "t3.micro"
- #   key    = value   
+    # key    = value   
   }
 }
+
 data "aws_ami" "ami" {
   owners      = ["973714476881"]
   most_recent = true
