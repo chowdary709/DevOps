@@ -32,5 +32,7 @@ resource "aws_route53_record" "record" {
   type    = "A"
   zone_id = "Z0013695SMHQDK42GJB1"
   ttl     = 300
-  records = [each.key == "web" ? each.value.public_ip : each.value.private_ip]
+  records = [ each.key == "web" ? each.key.public_ip : each.key.private_ip ]
 }
+
+
