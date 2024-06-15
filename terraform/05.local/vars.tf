@@ -13,12 +13,3 @@ variable "tag_name" {
     terraform   = true // men this instance will create in terraform
   }
 }
-
-resource "aws_instance" "instance" {
-  ami                         = local.ami
-  instance_type               = local.instance_type
-
-  tags = {
-    Name = "${var.tag_name}-instance" # in side a data to declare  a variable
-  }
-}
