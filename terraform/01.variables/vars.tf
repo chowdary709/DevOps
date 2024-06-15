@@ -7,11 +7,6 @@ variable "subnet_id" {
   default = "subnet-0804bbb270a178237"
 }
 
-variable "sg_id" {
-  type    = string
-  default = "sg-0b792d7d432d8d378"
-}
-
 variable "tag_name" {
   type = map
   default = {

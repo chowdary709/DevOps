@@ -3,7 +3,7 @@ resource "aws_instance" "instance" {
   instance_type               = var.instance_type
   subnet_id                   = var.subnet_id
   associate_public_ip_address = true
-  vpc_security_group_ids      = var.subnet_id # normal variables
+  vpc_security_group_ids      = "sg-0b792d7d432d8d378"
 
   tags = {
     Name = "${var.tag_name}-instance" # in side a data to declare  a variable
