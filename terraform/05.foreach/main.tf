@@ -3,7 +3,7 @@ variable "instance_name" {
   default = {
     web     = "t2.micro"
     # backend = "t2.micro"
-    # mysql   = "t3.micro"
+    mysql   = "t3.micro"
     # key    = value   
   }
 }
