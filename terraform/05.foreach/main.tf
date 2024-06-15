@@ -27,7 +27,7 @@ resource "aws_instance" "instance" {
 # route53 records
 
 resource "aws_route53_record" "record" {
-  for_each = var.instance_name
+  for_each = aws_instance.instance
   name    = "${each.key}.chowdary.cloud"
   type    = "A"
   zone_id = "Z0013695SMHQDK42GJB1"
