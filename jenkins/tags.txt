@@ -1,0 +1,8 @@
+delete all tags in a Git repository using PowerShell.
+
+# List all tags
+git tag -l | ForEach-Object { git tag -d $_ }
+
+# Remove all remote tags
+git ls-remote --tags origin | ForEach-Object { git push origin --delete $_.Split('/')[-1] }
+ 

@@ -1,0 +1,28 @@
+Title: Understanding CI/CD
+
+Continuous Integration (CI) and Continuous Delivery (CD) are practices in software development aimed at automating and improving the process of delivering software changes.
+
+Continuous Integration (CI):
+- Frequently integrates code changes into a shared repository.
+- Automatically verifies changes by building and running automated tests.
+- Detects integration errors early in the development process.
+
+Continuous Delivery (CD):
+- Automates the deployment process to ensure quick and reliable releases.
+- Every code change passing CI is automatically deployed to staging.
+- Staging environments undergo further testing before manual deployment to production.
+
+Continuous Deployment:
+- Extends Continuous Delivery by automatically deploying every validated code change to production.
+- Requires a high degree of automation and confidence in the CI/CD pipeline.
+
+Tools commonly used in CI/CD pipelines include Jenkins, GitLab CI/CD, Travis CI, CircleCI, and GitHub Actions.
+
+Benefits of CI/CD:
+- Automates repetitive tasks.
+- Reduces manual errors.
+- Enables rapid and reliable deployments.
+
+Overall, CI/CD practices help development teams deliver high-quality software more efficiently.
+
+
